@@ -1,0 +1,4 @@
+M UserModel
+F name varchar(200) unique
+F password varchar(200)
+EM
