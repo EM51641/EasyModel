@@ -1,6 +1,6 @@
 use Test::Simple tests => 8;
 use lib qw(lib);
-use DjangoModelGenerator::DataParser;
+use DataParser;
 use Test::MockObject;
 use Test::MockFile;
 

@@ -1,6 +1,6 @@
 use Test::Simple tests => 1;
 use lib qw(lib);
-use DjangoModelGenerator::DjangoModelWriter;
+use DjangoModelWriter;
 use Test::MockObject;
 use Test::MockFile;
 

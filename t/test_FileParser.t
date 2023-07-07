@@ -1,6 +1,6 @@
 use Test::Simple tests => 1;
 use lib qw(lib);
-use DjangoModelGenerator::FileParser;
+use FileParser;
 use Test::MockFile;
 
 my $foobar = Test::MockFile->file( "data.txt");

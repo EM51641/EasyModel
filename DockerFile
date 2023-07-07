@@ -4,9 +4,12 @@ RUN cpan App::cpanminus
 
 RUN cpanm Test::MockFile
 
-RUN cpanm Test::Warn --force && cpanm Test::MockObject
+RUN cpanm Test::Warn --force &&\
+    cpanm Test::MockObject
 
-RUN cpanm Test::Needs --force && cpanm Devel::Cover --force
+RUN cpanm Module::Build --force &&\
+    cpanm Test::Needs --force &&\
+    cpanm Devel::Cover --force
 
 ENV LANGUAGE=en_US.UTF-8 \
     LANG=en_US.UTF-8 \

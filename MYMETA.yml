@@ -1,0 +1,16 @@
+---
+abstract: 'Generate django models with a simple text editor.'
+author:
+  - 'Elyes Mahjoubi <elyesmahjoubi@gmail.com>'
+build_requires: {}
+dynamic_config: 0
+generated_by: 'Module::Build version 0.4234, CPAN::Meta::Converter version 2.150010'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: DjangoModelGenerator
+resources:
+  license: http://dev.perl.org/licenses/
+version: '0.1'
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
