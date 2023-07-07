@@ -1,5 +1,5 @@
 /Test::*
 /blib
-/_build
+/_build/*
 /cover_db
 /Build
