@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-package DjangoModelGenerator::DataParser;
+package EasyModel::Build::DataParser;
 
 
 sub new {

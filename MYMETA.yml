@@ -9,8 +9,8 @@ license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: '1.4'
-name: DjangoModelGenerator
+name: EasyModel/Build
 resources:
   license: http://dev.perl.org/licenses/
-version: '0.1'
+version: '1.0'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'

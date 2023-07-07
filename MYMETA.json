@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : 2
    },
-   "name" : "DjangoModelGenerator",
+   "name" : "EasyModel/Build",
    "prereqs" : {},
    "release_status" : "stable",
    "resources" : {
@@ -20,6 +20,6 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.1",
+   "version" : "1.0",
    "x_serialization_backend" : "JSON::PP version 4.16"
 }

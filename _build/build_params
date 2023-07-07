@@ -5,9 +5,7 @@ do{ my $x = [
        {},
        {
          'PL_files' => undef,
-         '_added_to_INC' => [
-                              '/workspaces'
-                            ],
+         '_added_to_INC' => [],
          'allow_mb_mismatch' => 0,
          'allow_pureperl' => 0,
          'auto_configure_requires' => 1,
@@ -50,10 +48,10 @@ do{ my $x = [
          'dist_author' => [
                             'Elyes Mahjoubi <elyesmahjoubi@gmail.com>'
                           ],
-         'dist_name' => 'DjangoModelGenerator',
+         'dist_name' => 'EasyModel/Build',
          'dist_suffix' => undef,
-         'dist_version' => '0.1',
-         'dist_version_from' => 'lib/DjangoModelGenerator.pm',
+         'dist_version' => '1.0',
+         'dist_version_from' => 'lib/EasyModel/Build.pm',
          'dynamic_config' => 1,
          'extra_compiler_flags' => [],
          'extra_linker_flags' => [],
@@ -78,7 +76,7 @@ do{ my $x = [
          'meta_merge' => {},
          'metafile' => 'META.yml',
          'metafile2' => 'META.json',
-         'module_name' => 'DjangoModelGenerator',
+         'module_name' => 'EasyModel/Build',
          'mymetafile' => 'MYMETA.yml',
          'mymetafile2' => 'MYMETA.json',
          'needs_compiler' => !!0,

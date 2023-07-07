@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-package DjangoModelGenerator::DjangoModelWriter;
+package EasyModel::Build::DjangoModelWriter;
 
 sub new {
     my $class = shift;

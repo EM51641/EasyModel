@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-package DjangoModelGenerator::FileParser;
+package EasyModel::Build::FileParser;
 
 sub new {
     my $class = shift;

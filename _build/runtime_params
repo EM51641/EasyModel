@@ -1,2 +1,12 @@
-do{ my $x = {};
+do{ my $x = {
+       'extra_compiler_flags' => [
+                                   '-O0',
+                                   '-fprofile-arcs',
+                                   '-ftest-coverage'
+                                 ],
+       'extra_linker_flags' => [
+                                 '-fprofile-arcs',
+                                 '-ftest-coverage'
+                               ]
+     };
 $x; }
