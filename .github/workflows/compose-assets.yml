@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Downloads a copy of the code in your repository before running CI tests
+      # Downloads a copy of the code in your repository before running CI tests.
       - uses: actions/checkout@v3
 
       - name: Create the docker container
@@ -25,8 +25,10 @@ jobs:
              echo 'Run tests !'
              docker exec easy_model sh -c "perl Build.pl"
 
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
+      # Setup codecov reader.
+      - uses: codecov/codecov-action@v3
+      
+      - name: Upload coverage report.
         env:
             CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
