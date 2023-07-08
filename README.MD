@@ -1,0 +1,1 @@
+[![codecov](https://codecov.io/gh/EM51641/EasyModel/branch/main/graph/badge.svg?token=Umj7G2hzei)](https://codecov.io/gh/EM51641/EasyModel) ![workflow](https://github.com/github/docs/actions/workflows/compose-assets.yml/badge.svg)$
