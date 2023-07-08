@@ -19,12 +19,13 @@ jobs:
         install-modules-with: cpanm
         install-modules-args: --with-develop --with-configure
 
-    - name: Install dependencies
+    - name: Install test dependencies
       run: |
           cpanm --quiet --notest Test::MockFile
           cpanm --quiet --notest Test::MockObject
           cpanm --quiet --notest Module::Build
           cpanm --quiet --notest Devel::Cover
+          coanm --quiet --notest Devel::Cover::Report::Codecovbash
 
     - name: Run tests and get coverage
       env:
