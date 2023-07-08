@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main"]
   pull_request:
     branches: [ "main" ]
 
@@ -25,7 +25,7 @@ jobs:
           cpanm --quiet --notest Test::MockObject
           cpanm --quiet --notest Module::Build
           cpanm --quiet --notest Devel::Cover
-          cpanm --quiet --notest Devel::Cover::Report::Codecovbash
+          cpanm --quiet --notest Devel::Cover::Report::Codecov
 
     - name: Run tests and get coverage
       env:
