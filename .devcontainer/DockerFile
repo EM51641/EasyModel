@@ -1,0 +1,17 @@
+FROM perl:5.38
+
+ENV PERL_MM_USE_DEFAULT=1 \
+    LANGUAGE=en_US.UTF-8 \
+    LANG=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8
+
+RUN cpan --notest App::cpanminus
+
+RUN cpanm --notest Test::MockFile
+
+RUN cpanm --notest Test::Warn &&\
+    cpanm --notest Test::MockObject
+
+RUN cpanm --notest Module::Build &&\
+    cpanm --notest Test::Needs &&\
+    cpanm --notest Devel::Cover

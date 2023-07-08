@@ -2,35 +2,34 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main"]
   pull_request:
     branches: [ "main" ]
 
 jobs:
   build:
-    # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
 
     steps:
-      # Downloads a copy of the code in your repository before running CI tests.
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-      - name: Create the docker container
-        run: |
-              echo 'Start Building Container'
-              docker compose up -d
+    - uses: shogo82148/actions-setup-perl@v1
+      with:
+        perl-version: '5.38.0'
+        install-modules-with: cpanm
+        install-modules-args: --with-develop --with-configure
 
-      - name: Execute tests
-        run: |
-             echo 'Run tests !'
-             docker exec easy_model sh -c "perl Build.pl"
+    - name: Install test dependencies
+      run: |
+          cpanm --quiet --notest Test::MockFile
+          cpanm --quiet --notest Test::MockObject
+          cpanm --quiet --notest Module::Build
+          cpanm --quiet --notest Devel::Cover
+          cpanm --quiet --notest Devel::Cover::Report::Codecov
 
-      # Setup codecov reader.
-      - uses: codecov/codecov-action@v3
-      
-      - name: Upload coverage report.
-        env:
-            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        run: |
-              docker exec easy_model sh -c "export CODECOV_TOKEN=$CODECOV_TOKEN"      
-              docker exec easy_model sh -c "cover -test -report -codecov"      
+    - name: Run tests and get coverage
+      env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      run: |
+          perl Build.pl
+          cover -test -report codecov
