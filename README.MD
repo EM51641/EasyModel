@@ -1,0 +1,1 @@
+[![codecov](https://codecov.io/gh/EM51641/EasyModel/branch/main/graph/badge.svg?token=Umj7G2hzei)](https://codecov.io/gh/EM51641/EasyModel) [![Docker Image CI](https://github.com/EM51641/EasyModel/actions/workflows/compose-assets.yml/badge.svg)](https://github.com/EM51641/EasyModel/actions/workflows/compose-assets.yml)
